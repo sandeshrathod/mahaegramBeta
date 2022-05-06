@@ -1,0 +1,12 @@
+ var d =JSON.stringify({"campaign_name":props.campname,"startdate": "2022-03-30 00:00:00","enddate": "2022-03-30 23:59:59","inv_mapped": arr,"budget":parseInt(props.budget),"inv_updated": true});
+      var data = JSON.parse(d);
+      
+          const tokens = props.tokens;
+          console.log("token",tokens);
+          const headers = { 
+            'Access-token':`${tokens}`
+          }
+
+            axios.post(`http://sandbox.lemmatechnologies.com/lemma/api/v1/saveCampaignPlan`,data,{headers}).then(res=>{
+              console.log(res);
+            });

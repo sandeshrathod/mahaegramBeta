@@ -1,0 +1,2 @@
+#time limit Redis #expiry
+expir KeyName secondsInnumbers
